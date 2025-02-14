@@ -1,0 +1,89 @@
+/* 🔹 Section 2 (Why Choose Us) */
+#sec-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../Images/gallery5.jpg) no-repeat center center/cover;
+  text-align: center;
+  padding: 60px 0;
+}
+
+#sec-2 h1 {
+  color: var(--txtaccent);
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#sec-2 p {
+  color: var(--txtaccent);
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* 🔹 Stats Container */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* 🔹 Individual Stat Card */
+.stats-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🔹 Stat Icon */
+.stats-icon {
+  width: 90px;
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.stats-icon img {
+  max-width: 60%;
+  height: auto;
+}
+
+/* 🔹 Stat Content */
+.stats-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.stats-content p {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 1024px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}

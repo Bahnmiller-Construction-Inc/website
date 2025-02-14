@@ -1,0 +1,291 @@
+/*MEDIA QUERRIES*/
+/*Smart phones */
+@media (min-width: 576px) {
+  html {
+    font-size: 13px;
+  }
+  .container {
+    width: 520px;
+  }
+  #sec-0 header nav a {
+    background-color: transparent;
+  }
+  #sec-0 input + nav {
+    background-color: var(--bgaccent_withOpacity);
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    width: 35%;
+    border-bottom-left-radius: 10px;
+  }
+  #sec-0 #searchBox {
+    transform: translateY(25px);
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    width: 720px;
+  }
+  #sec-0 header.top {
+    padding-top: 0px;
+  }
+  #sec-0 {
+    background-position: center center;
+  }
+  #sec-0 header.top .container {
+    justify-content: flex-start;
+  }
+  #sec-0 header.top p {
+    width: fit-content;
+    margin-right: 10px;
+  }
+  #sec-0 .top .social {
+    width: fit-content;
+    flex-grow: 1;
+  }
+  #sec-0 header label {
+    display: none;
+  }
+  #sec-0 header nav a {
+    border-style: none;
+  }
+  #sec-0 input + nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    width: fit-content;
+    position: static;
+    border-radius: none;
+    font-size: 0.8rem;
+  }
+  #sec-0 input:checked + nav {
+    display: flex;
+  }
+  #sec-0 article {
+    padding: 5rem 0px;
+  }
+  #sec-0 article h1 {
+    font-size: 2rem;
+  }
+  #sec-0 article h2 {
+    font-size: 3.5rem;
+  }
+  #sec-0 #searchBox {
+    min-width: 35%;
+  }
+  #sec-1 .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #sec-1 article {
+    padding: 0px;
+    text-align: left;
+    width: 51%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  #sec-1 article p {
+    padding-right: 1rem;
+  }
+  #sec-1 aside {
+    width: 48%;
+    margin: 0px;
+    text-align: right;
+  }
+  #sec-2 {
+    padding: 4rem 0px 2.5rem;
+  }
+  #sec-2 article {
+    justify-content: space-between;
+  }
+  #sec-2 article figure {
+    max-width: 40%;
+  }
+  #sec-2 article figure img {
+    max-width: 55%;
+  }
+  #sec-3 {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  #sec-3 .cont {
+    flex-direction: row;
+  }
+  #sec-3 .card {
+    width: 48%;
+  }
+  #sec-3 .card:last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #sec-4 .cont {
+    width: 100%;
+    margin: 0px;
+  }
+  #sec-4 aside img {
+    margin-bottom: 15px;
+    width: 48%;
+  }
+  #sec-5 h1 + p {
+    padding: 0px 6rem;
+  }
+  #sec-5 .cont {
+    gap: 5vw;
+  }
+  #sec-5 article {
+    width: 43%;
+  }
+  #sec-5 .contactUs form input + p {
+    bottom: 4px;
+  }
+  #sec-6 .container {
+    justify-content: space-between;
+    row-gap: 25px;
+  }
+  #sec-6 .about {
+    width: 65%;
+  }
+  #sec-6 .links {
+    width: 20%;
+  }
+  #sec-6 .posts {
+    width: 65%;
+  }
+  #sec-6 .contact {
+    width: 20%;
+  }
+}
+/* Standard PC screens */
+@media (min-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+  .container {
+    width: 1140px;
+  }
+  #sec-0 .top .social {
+    gap: 10px;
+  }
+  #sec-0 header:last-of-type .container {
+    padding: 0.95rem 0px;
+  }
+  #sec-0 header nav a {
+    margin-right: 10px;
+    font-size: 0.92rem;
+  }
+  #sec-0 article p {
+    padding-left: 14rem;
+    padding-right: 14rem;
+  }
+  #sec-1 article h1 {
+    font-size: 2.7rem;
+  }
+  #sec-1 article h2 {
+    font-size: 1.8rem;
+  }
+  #sec-2 {
+    background-position: center top;
+  }
+  #sec-2 article {
+    justify-content: space-evenly;
+  }
+  #sec-2 article figure {
+    max-width: 21%;
+  }
+  #sec-3 {
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+  #sec-3 .card {
+    width: 31%;
+  }
+  #sec-3 .card:last-child {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #sec-4 .cont {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  #sec-4 .cont > img {
+    width: 50%;
+    margin: 0px;
+  }
+  #sec-4 aside {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 49%;
+    gap: 10px;
+  }
+  #sec-4 aside img {
+    width: 49%;
+    margin: 0px;
+  }
+  #sec-5 {
+    background-position: right center;
+  }
+  #sec-5 .cont {
+    justify-content: space-between;
+    gap: 0px;
+    padding-bottom: 25px;
+  }
+  #sec-5 article {
+    width: 30%;
+  }
+  #sec-5 .contactUs > .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  #sec-5 .contactUs aside {
+    width: 45%;
+    text-align: left;
+  }
+  #sec-5 .contactUs form {
+    width: 45%;
+    padding-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #sec-5 .contactUs form input {
+    margin-right: 15px;
+  }
+  #sec-5 .contactUs form input:not(input[type="submit"]) {
+    flex-grow: 1;
+  }
+  #sec-5 .contactUs form input + p {
+    text-align: left;
+  }
+  #sec-6 .container {
+    justify-content: space-between;
+    row-gap: 25px;
+  }
+  #sec-6 .about {
+    width: 30%;
+  }
+  #sec-6 .links {
+    width: 15%;
+  }
+  #sec-6 .posts {
+    width: 20%;
+  }
+  #sec-6 .contact {
+    width: 18%;
+  }
+}
+@media (min-width: 1400px) {
+  html {
+    font-size: 17px;
+  }
+  .container {
+    width: 1340px;
+  }
+}

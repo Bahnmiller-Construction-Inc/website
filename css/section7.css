@@ -1,0 +1,13 @@
+/* SECTION SEVEN */
+#sec-7 {
+  background-color: var(--bgaccent);
+  padding: 20px 0px 10px;
+  text-align: center;
+  font-size: 0.7rem;
+}
+#sec-7 p {
+  color: var(--txtaccent5);
+}
+#sec-7 p span {
+  color: var(--haccent);
+}
