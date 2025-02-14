@@ -1,7 +1,7 @@
 /* 🔹 Section 4 Styling */
 #sec-4 {
   padding: 40px 0;
-  background-color: #f9f9f9; /* Example background color */
+  background-color: #f9f9f9;
 }
 
 #sec-4 h1 {
@@ -16,7 +16,7 @@
   line-height: 1.5;
 }
 
-/* 🔹 Filter links styling */
+/* 🔹 Filter Links Styling */
 #sec-4 .filter {
   text-align: center;
   margin-bottom: 30px;
@@ -38,7 +38,7 @@
 .highlighted-project {
   position: relative;
   width: 100%;
-  max-height: 400px;
+  max-height: 500px;
   overflow: hidden;
   border-radius: 10px;
   display: flex;
@@ -48,7 +48,7 @@
 
 .highlighted-project img {
   width: 100%;
-  height: 400px;
+  height: 500px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -60,7 +60,7 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 5px;
   width: 80%;
@@ -80,7 +80,7 @@
 
 .btn-primary {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background: #007bff;
   color: white;
   font-weight: bold;
@@ -104,7 +104,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  height: 250px; /* Ensuring all slides are uniform */
+  height: 400px;
 }
 
 .owl-carousel .item img {
@@ -114,26 +114,83 @@
   border-radius: 4px;
 }
 
-/* 🔹 Navigation Arrows and Dots */
-.owl-theme .owl-nav [class*="owl-"] {
-  background: #333;
-  color: #fff;
-  padding: 5px 15px;
-  margin: 5px;
-  border-radius: 3px;
-  font-size: 14px;
-  transition: background 0.3s;
+/* 🔹 Bigger, More User-Friendly Navigation Arrows */
+.owl-theme .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
-.owl-theme .owl-nav [class*="owl-"]:hover {
-  background: #555;
+/* 🔹 Hide Default Owl Carousel Small Arrows */
+.owl-theme .owl-nav button span {
+  display: none;
+}
+
+/* 🔹 Custom Large Navigation Arrows */
+.owl-theme .owl-nav button {
+  background: rgba(0, 0, 0, 0.8);
+  color: rgb(0, 49, 211);
+  font-size: 50px;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: all;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.owl-theme .owl-nav button:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+/* 🔹 Corrected Font Awesome Arrow Icons */
+.owl-theme .owl-nav .owl-prev::before,
+.owl-theme .owl-nav .owl-next::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 50px;
+  color: rgb(4, 51, 220);
+}
+
+.owl-theme .owl-nav .owl-prev::before {
+  content: "\f104";
+}
+
+.owl-theme .owl-nav .owl-next::before {
+  content: "\f105";
+}
+
+/* 🔹 Adjust arrow positioning */
+.owl-theme .owl-nav .owl-prev {
+  position: absolute;
+  left: -100px;
+}
+
+.owl-theme .owl-nav .owl-next {
+  position: absolute;
+  right: -100px;
+}
+
+/* 🔹 Navigation Dots */
+.owl-theme .owl-dots {
+  text-align: center;
+  margin-top: 15px;
 }
 
 .owl-theme .owl-dots .owl-dot span {
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   background: #333;
-  display: block;
+  display: inline-block;
   border-radius: 50%;
   margin: 5px;
   transition: background 0.3s;
@@ -141,5 +198,57 @@
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #555;
+  background: #007bff;
+}
+
+/* 🔹 Responsive Design Adjustments */
+@media (max-width: 1024px) {
+  .owl-theme .owl-nav button {
+    width: 65px;
+    height: 65px;
+    font-size: 35px;
+  }
+  .owl-theme .owl-nav .owl-prev {
+    left: -50px;
+  }
+  .owl-theme .owl-nav .owl-next {
+    right: -50px;
+  }
+  .owl-carousel .item {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .owl-theme .owl-nav button {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+  .owl-theme .owl-nav .owl-prev {
+    left: -30px;
+  }
+  .owl-theme .owl-nav .owl-next {
+    right: -30px;
+  }
+  .owl-carousel .item {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .owl-theme .owl-nav button {
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+  }
+  .owl-theme .owl-nav .owl-prev {
+    left: -20px;
+  }
+  .owl-theme .owl-nav .owl-next {
+    right: -20px;
+  }
+  .owl-carousel .item {
+    height: 250px;
+  }
 }
