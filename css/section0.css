@@ -3,7 +3,9 @@
   position: relative;
   overflow: hidden;
 }
-
+article {
+  height: 50vh;
+}
 #sec-0 #bg-video {
   position: absolute;
   top: 0;
