@@ -115,15 +115,14 @@
   border-radius: 4px;
 }
 
-/* 🔹 Bigger, More User-Friendly Navigation Arrows */
+/* 🔹 Navigation Arrows Under Slideshow */
 .owl-theme .owl-nav {
-  position: absolute;
-  top: 50%;
-  width: 100%;
   display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  pointer-events: none;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px; /* put some space above arrows */
+  pointer-events: auto;
+  position: static; /* remove absolute positioning so they appear under carousel */
 }
 
 /* 🔹 Hide Default Owl Carousel Small Arrows */
@@ -137,8 +136,8 @@
   color: rgb(0, 49, 211);
   font-size: 50px;
   border-radius: 50%;
-  width: 85px;
-  height: 85px;
+  width: 70px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,7 +157,7 @@
 .owl-theme .owl-nav .owl-next::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  font-size: 50px;
+  font-size: 40px;
   color: rgb(4, 51, 220);
 }
 
@@ -168,17 +167,6 @@
 
 .owl-theme .owl-nav .owl-next::before {
   content: "\f105";
-}
-
-/* 🔹 Adjust arrow positioning */
-.owl-theme .owl-nav .owl-prev {
-  position: absolute;
-  left: -100px;
-}
-
-.owl-theme .owl-nav .owl-next {
-  position: absolute;
-  right: -100px;
 }
 
 /* 🔹 Navigation Dots */
@@ -201,31 +189,29 @@
 .owl-theme .owl-dots .owl-dot:hover span {
   background: #007bff;
 }
+
 /* 🔹 Modal Styling */
 .modal {
-  display: none; /* Ensures the modal is hidden initially */
   position: fixed;
+  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0; */
   z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
+  display: none; /* hidden by default */
 }
 
-/* 🔹 Modal Content */
+.modal.modal-open {
+  display: flex; /* triggers flex alignment */
+  align-items: center;
+  justify-content: center;
+}
+
 .modal-content {
   max-width: 90%;
   max-height: 90%;
-  margin: auto;
-  display: block;
   border-radius: 8px;
+  display: block;
 }
 
-/* 🔹 Close Button (X) */
 .close {
   position: absolute;
   top: 15px;
@@ -240,6 +226,7 @@
 .close:hover {
   color: #ff5a5a;
 }
+
 /* 🔹 Image Container */
 .image-container {
   position: relative;
@@ -282,52 +269,34 @@
 
 /* 🔹 Responsive Design Adjustments */
 @media (max-width: 1024px) {
-  .owl-theme .owl-nav button {
-    width: 65px;
-    height: 65px;
-    font-size: 35px;
-  }
-  .owl-theme .owl-nav .owl-prev {
-    left: -50px;
-  }
-  .owl-theme .owl-nav .owl-next {
-    right: -50px;
-  }
   .owl-carousel .item {
     height: 350px;
+  }
+  .owl-theme .owl-nav button {
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
   }
 }
 
 @media (max-width: 768px) {
-  .owl-theme .owl-nav button {
-    width: 55px;
-    height: 55px;
-    font-size: 30px;
-  }
-  .owl-theme .owl-nav .owl-prev {
-    left: -30px;
-  }
-  .owl-theme .owl-nav .owl-next {
-    right: -30px;
-  }
   .owl-carousel .item {
     height: 300px;
+  }
+  .owl-theme .owl-nav button {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
   }
 }
 
 @media (max-width: 480px) {
+  .owl-carousel .item {
+    height: 250px;
+  }
   .owl-theme .owl-nav button {
     width: 45px;
     height: 45px;
-    font-size: 25px;
-  }
-  .owl-theme .owl-nav .owl-prev {
-    left: -20px;
-  }
-  .owl-theme .owl-nav .owl-next {
-    right: -20px;
-  }
-  .owl-carousel .item {
-    height: 250px;
+    font-size: 20px;
   }
 }

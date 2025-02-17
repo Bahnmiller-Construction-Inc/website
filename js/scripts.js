@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("scripts.js loaded"); // Debug message
 
-  // Initialize Owl Carousel
+  // 🔹 Initialize Owl Carousel
   $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 10,
@@ -14,32 +14,32 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // 🔹 Modal Functionality
+  // 🔹 Modal Elements
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("modalImg");
   const closeBtn = document.querySelector(".close");
 
-  // Hide modal by default
-  modal.style.display = "none";
-
-  // Select both images and buttons for event listeners
+  // 🔹 When an image-container is clicked, open the modal and set the image
   document.querySelectorAll(".image-container").forEach((container) => {
     container.addEventListener("click", function () {
-      const img = this.querySelector("img"); // Get image inside container
-      modal.style.display = "block";
+      const img = this.querySelector("img");
+      // Add our .modal-open class
+      modal.classList.add("modal-open");
+      // Update modal image src
       modalImg.src = img.src;
     });
   });
 
-  // When the close button (×) is clicked, hide the modal
+  // 🔹 Close button click
   closeBtn.addEventListener("click", function () {
-    modal.style.display = "none";
+    modal.classList.remove("modal-open");
   });
 
-  // If user clicks outside the modal image, close the modal
+  // 🔹 Clicking outside the image closes the modal
+  //    (Check if the user clicked the backdrop itself)
   modal.addEventListener("click", function (event) {
     if (event.target === modal) {
-      modal.style.display = "none";
+      modal.classList.remove("modal-open");
     }
   });
 });
